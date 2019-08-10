@@ -1,0 +1,39 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.modal-container.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-container .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+.modal-container .modal {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 25px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 12;
+}
+.modal-container .modal.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%);
+}
